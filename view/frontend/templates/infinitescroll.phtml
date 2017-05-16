@@ -1,0 +1,51 @@
+<?php if($block->isEnabled()): ?>
+	<?php if($block->removePagination()): ?>
+		<style type="text/css">
+			.toolbar .pages {
+				display: none !important;
+			}
+		</style>
+	<?php endif; ?>
+	<?php
+		$listMode = $block->getListMode();
+	?>
+	<?php if($block->strictScreenWidth()): ?>
+		<script type="text/javascript">
+			var min_width = <?php echo $block->getMinScreenWidth(); ?>;
+			var max_width = <?php echo $block->getMaxScreenWidth(); ?>;
+			if(document.documentElement.clientWidth >= min_width && document.documentElement.clientWidth <= max_width) {
+				var count = 0;
+				sh(document).ready(function() {
+					sh.ajaxscroll({
+						container : '.column',
+						<?php if ($listMode == 'grid-list'): ?>
+						item: '.product-item',
+						<?php else: ?>
+						item: '.product-item',
+						<?php endif; ?>
+						pagination: '.pages .item',
+						next: '.next',
+						loader: '<strong>Loading... Please Wait<strong/>'
+					});
+				});
+			}
+		</script>
+	<?php else: ?>
+		<script type="text/javascript">
+			var count = 0;
+			sh(document).ready(function() {
+				sh.ajaxscroll({
+					container : '.column',
+					<?php if ($listMode == 'grid-list'): ?>
+					item: '.product-item',
+					<?php else: ?>
+					item: '.product-item',
+					<?php endif; ?>
+					pagination: '.pages .item',
+					next: '.next',
+					loader: '<strong>Loading... Please Wait<strong/>'
+				});
+			});
+		</script>
+	<?php endif; ?>
+<?php endif; ?>

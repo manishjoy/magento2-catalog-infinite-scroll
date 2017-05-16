@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <thecodingtutor_infinitescroll>
+            <basic_setting>
+                <enabled>1</enabled>
+            </basic_setting>
+            <advance_settings>
+            	<remove_pagination>1</remove_pagination>
+                <only_for_selected_screen>0</only_for_selected_screen>
+                <min_width>0</min_width>
+                <max_width>767</max_width>
+            </advance_settings>
+        </thecodingtutor_infinitescroll>
+    </default>
+</config>

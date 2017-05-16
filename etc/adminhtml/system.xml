@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="thecodingtutor_infinitescroll" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>InfiniteScroll</label>
+            <tab>thecodingtutor</tab>
+            <resource>TheCodingTutor_Infinitescroll::config_infinitescroll</resource>
+            <group id="basic_setting" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Basic Settings</label>
+                <attribute type="expanded">1</attribute>
+
+                <field id="version" type="text" translate="label comment" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <frontend_model>TheCodingTutor\Infinitescroll\Block\Adminhtml\System\Config\Form\Version</frontend_model>
+                </field>
+
+                <field id="enabled" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enable InfiniteScroll</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="advance_settings" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="0">
+                <label>Advance Settings</label>
+                <attribute type="expanded">1</attribute>
+                <field id="remove_pagination" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Remove Default Pagination</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="only_for_selected_screen" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable only in Particular Screen Width</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[If selected yes, then will work only in the defined screen width.]]></comment>
+                </field>
+                <field id="min_width" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Min. Width</label>
+                    <depends>
+                        <field id="*/*/only_for_selected_screen">1</field>
+                    </depends>
+                    <comment><![CDATA[Enter minimum screen width (in <strong>px</strong>). e.g. 10]]></comment>
+                </field>
+                <field id="max_width" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Max. Width</label>
+                    <depends>
+                        <field id="*/*/only_for_selected_screen">1</field>
+                    </depends>
+                    <comment><![CDATA[Enter maximum screen width (in <strong>px</strong>). e.g. 768]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

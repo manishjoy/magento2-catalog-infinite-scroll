@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<add id="TheCodingTutor_Infinitescroll::infinitescroll" title="InfiniteScroll" module="TheCodingTutor_Infinitescroll" resource="TheCodingTutor_Infinitescroll::infinitescroll" sortOrder="20" parent="TheCodingTutor_Core::core"/>
+        <add id="TheCodingTutor_Infinitescroll::infinitescroll_manage" title="Configuration" module="TheCodingTutor_Infinitescroll" sortOrder="10" parent="TheCodingTutor_Infinitescroll::infinitescroll" action="adminhtml/system_config/edit/section/thecodingtutor_infinitescroll" resource="TheCodingTutor_Infinitescroll::manage"/>
+    </menu>
+</config>

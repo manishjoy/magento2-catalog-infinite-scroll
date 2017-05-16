@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<script src="TheCodingTutor_Infinitescroll::js/infinitescroll/jquery-1.7.2.min.js"/> 
+		<script src="TheCodingTutor_Infinitescroll::js/infinitescroll/jquery.ajaxscroll.min.js"/>
+		<script src="TheCodingTutor_Infinitescroll::js/infinitescroll/easing.js"/>
+		<css src="TheCodingTutor_Infinitescroll::css/infinitescroll/infinitescroll.css" />
+	</head>
+    <body>
+		<referenceContainer name="content">
+			<block class="TheCodingTutor\Infinitescroll\Block\Infinitescroll" name="mj.infinitescroll" template="TheCodingTutor_Infinitescroll::infinitescroll.phtml" />
+		</referenceContainer>
+    </body>
+</page>
