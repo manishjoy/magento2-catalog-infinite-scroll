@@ -14,7 +14,7 @@ ________________________________________________________________________________
 
 More courses and tutorials about Magento 2 visit:
 
-http://thecodingtutor.com/category/magento/
+https://blog.manishjoy.com/magento-development-guide/
 
 ### The extension is free and always will be
 
